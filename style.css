@@ -19,10 +19,21 @@ html,
 body {
     width: 100%;
     height: 100%;
+    background-color: black;
 }
 
 .main {
     width: 100%;
+}
+.cursur{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
 }
 
 nav {
@@ -61,7 +72,14 @@ nav>h4:nth-last-child(1) {
     font-family: generalSans-Regular;
     padding-left: 50px;
 }
-
+.bounding{
+    width: fit-content;
+    /* background-color: red; */
+    overflow: hidden;
+}
+.boundingelem{
+    transform: translateY(100%);
+}
 .page1-text-section h1 {
     font-size: 10vw;
     line-height: 9vw;
@@ -71,14 +89,17 @@ nav>h4:nth-last-child(1) {
 
 .page1-small-text {
     width: 62%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
 }
 
-.page1-small-text>h1 {
-    text-align: right;
+.page1-small-text h1 {
+    text-align: right !important;
 }
 
-.page1-small-text>p {
-    text-align: right;
+.page1-small-text p {
+    text-align: right !important;
     margin-top: 20px;
     font-weight: 900;
     font-size: 1vw;
@@ -87,12 +108,15 @@ nav>h4:nth-last-child(1) {
 
 .page1-Workday {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
     padding-right: 45px;
     padding-top: 90px;
 }
 
-.page1-Workday>p {
-    font-family: generalSans-Medium;
+.page1-Workday p {
+    font-family: generalSans-Medium !important;
     font-weight: 900;
     text-align: right;
     margin-top: 10px;

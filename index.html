@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="loco.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div class="cursur"></div>
     <nav>
         <h4>Cynthia Ugwu</h4>
         <h4>Menu+</h4>
@@ -17,23 +19,33 @@
     <div class="main">
         <div class="page1">
             <div class="page1-text-section">
-                <h1>PRODUCT</h1>
+                <div class="bounding">
+                    <h1 class="boundingelem">PRODUCT</h1>
+                </div>
                 <div class="page1-small-text">
-                    <h1>DESIGNER</h1>
-                    <p>BASED IN TORONTO</p>
+                    <div class="bounding">
+                        <h1 class="boundingelem">DESIGNER</h1>
+                    </div>
+                    <div class="bounding">
+                        <p class="boundingelem">BASED IN TORONTO</p>
+                    </div>
                 </div>
             </div>
             <div class="page1-Workday">
-                    <p>AVAILABLE FOR FREELANCE</p>
-                    <p>WORK FROM MAY 23'</p>
+                <div class="bounding">
+                    <p class="boundingelem">AVAILABLE FOR FREELANCE</p>
+                </div>
+                <div class="bounding">
+                    <p class="boundingelem">WORK FROM MAY 23'</p>
+                </div>
             </div>
             <div class="page1-footer">
-                   <h4>CURRENTLY WORKING AT YML<i class="ri-arrow-right-up-line"></i></h4>
-                   <h4>PROTOPIE AMBASSADOR<i class="ri-arrow-right-up-line"></i></h4>
-                   <div class="page1-right-footer">
-                       <div class="circle"><i class="ri-arrow-down-line"></i></div>
-                       <div class="circle"><i class="ri-arrow-down-line"></i></div>
-                   </div>
+                <h4>CURRENTLY WORKING AT YML<i class="ri-arrow-right-up-line"></i></h4>
+                <h4>PROTOPIE AMBASSADOR<i class="ri-arrow-right-up-line"></i></h4>
+                <div class="page1-right-footer">
+                    <div class="circle"><i class="ri-arrow-down-line"></i></div>
+                    <div class="circle"><i class="ri-arrow-down-line"></i></div>
+                </div>
             </div>
         </div>
         <div class="page2">
@@ -52,19 +64,23 @@
                 <h1>HUdu</h1>
                 <p>2021</p>
             </div>
-        </div> 
-         <div class="page3">
+        </div>
+        <div class="page3">
             <div class="page3-hero">
                 <img src="./assets/cynthia.png" alt="">
                 <div class="page3-text">
-                     <h5>(about me)</h5>
-                     <h4>I'm a product designer with a passion for creating products that not only look good but also solve real problems. When I'm not sketching ideas on paper, you can find me binge-watching a Netflix series or playing video games. My design philosophy is simple: make it visually appealing, functional, and bring a smile to people's faces. I'm the designer you want on your team if you want to make people say 'I need that in my life!'.</h4>
-                     <a href="#">Let's talk</a>
+                    <h5>(about me)</h5>
+                    <h4>I'm a product designer with a passion for creating products that not only look good but also
+                        solve real problems. When I'm not sketching ideas on paper, you can find me binge-watching a
+                        Netflix series or playing video games. My design philosophy is simple: make it visually
+                        appealing, functional, and bring a smile to people's faces. I'm the designer you want on your
+                        team if you want to make people say 'I need that in my life!'.</h4>
+                    <a href="#">Let's talk</a>
                 </div>
             </div>
             <div class="page3-channel">
-                   <h5>(FORGOT TO MENTION)</h5>
-                   <h4>SUBSCRIBE TO MY YOUTUBE CHANNEL<i class="ri-arrow-right-up-line"></i></h4>
+                <h5>(FORGOT TO MENTION)</h5>
+                <h4>SUBSCRIBE TO MY YOUTUBE CHANNEL<i class="ri-arrow-right-up-line"></i></h4>
             </div>
         </div>
         <footer>
@@ -80,6 +96,12 @@
             </div>
         </footer>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
