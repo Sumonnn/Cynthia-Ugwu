@@ -194,9 +194,9 @@ nav>h4:nth-last-child(1) {
     border-bottom: 1px solid #888;
 }
 
-.elem>img {
+.elem img {
     position: absolute;
-    z-index: 999;
+    z-index: 9999;
     height: 140%;
     display: none;
 }
