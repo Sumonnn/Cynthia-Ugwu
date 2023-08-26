@@ -195,10 +195,12 @@ nav>h4:nth-last-child(1) {
 }
 
 .elem img {
-    position: absolute;
+    pointer-events: none;
     z-index: 9999;
     height: 140%;
-    display: none;
+    opacity: 0;
+    position: absolute;
+    transform: translate(-20%,0%);
 }
 
 .elem>p {

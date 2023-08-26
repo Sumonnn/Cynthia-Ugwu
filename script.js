@@ -69,22 +69,22 @@ function secondPageElemAnim() {
         elem.addEventListener("mousemove", (dets) => {
             
             let diff = dets.clientY - 150 - elem.getBoundingClientRect().top;
-            // diffrot = dets.clientX - rotate;
-            // rotate = dets.clientX;
+            diffrot = dets.clientX - rotate;
+            rotate = dets.clientX;
             
             console.log(diff);
 
             gsap.to(elem.querySelector("img"), {
-                display: 'block',
+                opacity:1,
                 ease:Power1,
                 top:diff,
                 left:dets.clientX - 150,
-                // rotate:gsap.utils.clamp(-20,20,diffrot),   
+                rotate:gsap.utils.clamp(-20,20,diffrot),   
             })
         })
         elem.addEventListener("mouseleave", (dets) => {
             gsap.to(elem.querySelector("img"), {
-                display: 'none',
+                opacity:0,  
                 ease:Power1,
             })
         })
@@ -93,7 +93,7 @@ function secondPageElemAnim() {
 
 
 cursurMove();
-// firstPageAnim();
+firstPageAnim();
 cursurChaptaKaro();
 secondPageElemAnim();
 
