@@ -36,8 +36,9 @@ function firstPageAnim() {
         y: `-100`,
         opacity: 0,
         duration: 1.5,
+        delay:2.5,
         ease: Expo.easeInOut,
-    })
+        })
         .to(".boundingelem", {
             y: 0,
             duration: 2,
@@ -114,16 +115,15 @@ function loder() {
                 document.querySelector(".number").textContent = `100%`;
             }
         }
-        else
-        {
+        else {
             clearInterval();
             document.querySelector('.full-screen').style.top = `-100vh`;
         }
     }, 150);
 }
 
+loder();
 cursurMove();
-firstPageAnim();
 cursurChaptaKaro();
 secondPageElemAnim();
-loder();
+firstPageAnim();
