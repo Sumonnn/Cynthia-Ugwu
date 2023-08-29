@@ -67,33 +67,63 @@ function secondPageElemAnim() {
         let diffrot = 0;
 
         elem.addEventListener("mousemove", (dets) => {
-            
             let diff = dets.clientY - 150 - elem.getBoundingClientRect().top;
             diffrot = dets.clientX - rotate;
             rotate = dets.clientX;
-            
-            console.log(diff);
 
             gsap.to(elem.querySelector("img"), {
-                opacity:1,
-                ease:Power1,
-                top:diff,
-                left:dets.clientX - 150,
-                rotate:gsap.utils.clamp(-20,20,diffrot),   
+                opacity: 1,
+                ease: Power1,
+                top: diff,
+                left: dets.clientX - 150,
+                rotate: gsap.utils.clamp(-20, 20, diffrot),
             })
+
+        })
+        elem.addEventListener("mouseenter", () => {
+            gsap.to(document.querySelector(".cursur"), {
+                width: '80px',
+                height: '80px',
+            })
+            document.querySelector(".cursur>p").style.display = 'block';
         })
         elem.addEventListener("mouseleave", (dets) => {
             gsap.to(elem.querySelector("img"), {
-                opacity:0,  
-                ease:Power1,
+                opacity: 0,
+                ease: Power1,
             })
+            gsap.to(document.querySelector(".cursur"), {
+                width: '12px',
+                height: '12px',
+            })
+            document.querySelector(".cursur>p").style.display = 'none';
+
         })
     })
 }
-
+function loder() {
+    let grow = 0;
+    setInterval(() => {
+        if (grow <= 100) {
+            document.querySelector(".inner").style.width = `${grow}%`;
+            grow += Math.floor(Math.random()
+                * 15);
+            document.querySelector(".number").textContent = `${grow}%`;
+            if (grow > 99) {
+                document.querySelector(".inner").style.width = `100%`;
+                document.querySelector(".number").textContent = `100%`;
+            }
+        }
+        else
+        {
+            clearInterval();
+            document.querySelector('.full-screen').style.top = `-100vh`;
+        }
+    }, 150);
+}
 
 cursurMove();
 firstPageAnim();
 cursurChaptaKaro();
 secondPageElemAnim();
-
+loder();
